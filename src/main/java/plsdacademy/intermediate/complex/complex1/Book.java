@@ -3,15 +3,13 @@ package plsdacademy.intermediate.complex.complex1;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
-import plsdacademy.intermediate.basic.Basic8FilesandStreams.Genre;
 
 import java.util.UUID;
 
 @Builder
 @ToString
 @Getter
-
-public class Book {
+class Book {
 
     Genre genre;
     String title;
@@ -41,8 +39,12 @@ public class Book {
     }
 
     protected BookShortInfo toBookShortInfo() {
-        BookShortInfo book = new BookShortInfo(title, author, yearPublished, id);
-        return book;
+        return BookShortInfo.builder()
+                .title(this.title)
+                .author(this.author)
+                .yearPublished(this.yearPublished)
+                .id(this.id)
+                .build();
     }
 
 

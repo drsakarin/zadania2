@@ -1,24 +1,18 @@
 package plsdacademy.intermediate.complex.complex1;
 
-import plsdacademy.intermediate.basic.Basic8FilesandStreams.Book;
-import plsdacademy.intermediate.basic.Basic8FilesandStreams.Genre;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.Set;
 
 class BookStoreInitializer {
 
-    public List<Book> initBookStore() {
+    Set<Book> initBookStore() {
 
 
-        List<Book> books = new ArrayList<>();
-        books
-                .stream()
-                .collect(Collectors.toSet());
+        Set<Book> books = new HashSet<>();
+
 
         String booksFilePathFromResources = getClass().getClassLoader().getResource("books.txt").getFile();
         File booksFile = new File(booksFilePathFromResources);
