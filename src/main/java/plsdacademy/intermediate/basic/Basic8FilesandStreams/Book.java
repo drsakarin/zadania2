@@ -7,15 +7,14 @@ import lombok.ToString;
 @Builder
 @ToString
 @Getter
+class Book {
 
-public class Book {
-
-    String title;
-    String author;
-    int yearPublished;
-    int numberOfPages;
-    double price;
-    private plsdacademy.intermediate.basic.Basic8FilesandStreams.Genre genre;
+  private String title;
+  private String author;
+  private int yearPublished;
+  private int numberOfPages;
+  private double price;
+  private Genre genre;
 
 
 }

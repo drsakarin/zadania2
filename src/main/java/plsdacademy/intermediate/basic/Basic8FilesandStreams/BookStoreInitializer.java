@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class BookStoreInitializer {
+ class BookStoreInitializer {
 
-    public List<Book> initBookStore() {
+     List<Book> initBookStore() {
 
-        List<Book> books = new ArrayList<>();
-        String booksFilePathFromResources = getClass().getClassLoader().getResource("books.txt").getFile();
-        File booksFile = new File(booksFilePathFromResources);
-        System.out.println("w klasie czytajacej");
-        try {
-            Scanner scanner = new Scanner(booksFile);
+         List<Book> books = new ArrayList<>();
+         String booksFilePathFromResources = getClass().getClassLoader().getResource("books.txt").getFile();
+         File booksFile = new File(booksFilePathFromResources);
+         System.out.println("w klasie czytajacej");
+         try {
+             Scanner scanner = new Scanner(booksFile);
 
-            while (scanner.hasNext()) {
-                String bookLine = scanner.nextLine();
+             while (scanner.hasNext()) {
+                 String bookLine = scanner.nextLine();
                 String[] bookLineSplit = bookLine.split("\\|");
                 String title = bookLineSplit[0];
                 String author = bookLineSplit[1];

@@ -21,10 +21,10 @@ class BookFilterCriteria {
         if (priceRange != null)
             result &= priceRange.contains(book.getPrice());
         if (titlePart != null) {
-            result &= book.getTitle().toLowerCase().contains(titlePart);
+            result &= book.getTitle().toLowerCase().contains(titlePart.toLowerCase());
         }
         if (authorPart != null) {
-            result &= book.getAuthor().toLowerCase().contains(authorPart);
+            result &= book.getAuthor().toLowerCase().contains(authorPart.toLowerCase());
         }
         return result;
     }

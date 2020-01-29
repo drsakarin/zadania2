@@ -16,7 +16,7 @@ class BookStoreInitializer {
 
         String booksFilePathFromResources = getClass().getClassLoader().getResource("books.txt").getFile();
         File booksFile = new File(booksFilePathFromResources);
-        System.out.println("w klasie czytajacej");
+
         try {
             Scanner scanner = new Scanner(booksFile);
             System.out.println("czytam");

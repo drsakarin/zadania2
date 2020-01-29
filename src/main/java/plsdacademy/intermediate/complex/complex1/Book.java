@@ -47,5 +47,7 @@ class Book {
                 .build();
     }
 
-
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 }
